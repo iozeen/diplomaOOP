@@ -1,17 +1,22 @@
 package course;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class Person {
+/*
+Я тут удалил поле id и все с ним связанное,
+прикольная штука getClass().getSimpleName() - не знал
+ */
+public class Person {
     private String name;
     private String surname;
-    private int idCode;
     private String phone;
 
     public String getName() {
         return name;
     }
 
-    public final void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -21,14 +26,6 @@ public abstract class Person {
 
     public final void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public int getIdCode() {
-        return idCode;
-    }
-
-    public void setIdCode(int idCode) {
-        this.idCode = idCode;
     }
 
     public String getPhone() {
@@ -42,10 +39,11 @@ public abstract class Person {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
-        sb.append("idCode=").append(getIdCode());
-        sb.append(", ").append(getClass().getSimpleName());
-        sb.append(", ").append(getName());
-        sb.append(" ").append(getSurname());
+        sb.append(getClass().getSimpleName());
+        sb.append("[name:").append(getName());
+        sb.append(", last name: ").append(getSurname());
+        sb.append(", phone: ").append(getPhone());
+        sb.append("]");
         return sb.toString();
     }
 }
