@@ -24,7 +24,7 @@ public class Person {
         return surname;
     }
 
-    public final void setSurname(String surname) {
+    public void setSurname(String surname) {
         this.surname = surname;
     }
 
