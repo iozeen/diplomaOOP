@@ -4,25 +4,37 @@ package course;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Employee extends Person implements InterfaceEmployee {
-    private static List<Employee> employeeList = new ArrayList<>();
+public abstract class Employee extends Person{
+    private Long hireDate;
+    private int id;
 
-    public static List<Employee> getEmployeeList() {
-        return employeeList;
+    public Long getHireDate() {
+        return hireDate;
+    }
+
+    public Employee setHireDate(Long hireDate) {
+        this.hireDate = hireDate;
+        return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Employee setId(int id) {
+        this.id = id;
+        return this;
     }
 
     @Override
-    public void printStudentByLevel(String level) {
-
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.delete(sb.length() - 1, sb.length());
+        sb.append(", hire date: ").append(getHireDate());
+        sb.append(", id: ").append(getId()).append("]");
+        return sb.toString();
     }
 
-    @Override
-    public void printStudentByName() {
-
-    }
-
-    @Override
-    public void printStudentByGroup(String group) {
-
-    }
+    abstract Long earnings();
 }
