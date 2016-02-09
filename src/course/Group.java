@@ -9,7 +9,10 @@ public class Group {
     private Instructor instructor;
     private Level levelGroup;
 
+
+
     public Group() {
+
 
     }
 
@@ -35,6 +38,9 @@ public class Group {
             return true;
         }
         return false;
+    }
+    public List<Student> getStudentList() {
+        return studentList;
     }
 
 
