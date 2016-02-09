@@ -26,7 +26,7 @@ public class Student extends Person {
         return level;
     }
 
-    public void setSessionSum(int sum) {
-        this.sessionSum = this.sessionSum + sum/FirmAccount.getSessionCost();
+    public void addSession() {
+        sessionSum = sessionSum++;
     }
 }
