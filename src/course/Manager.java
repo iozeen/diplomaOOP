@@ -18,7 +18,7 @@ public class Manager implements ManagerInterface {
     public boolean getPayment(Student student, int sum) {
         if(FirmAccount.getStudentList().contains(student)){
             FirmAccount.updateBalance(sum);
-            student.setSessionSum(sum);
+            student.setValueCash(sum);
             return true;
         }
         return false;

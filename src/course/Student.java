@@ -35,4 +35,8 @@ public class Student extends Person {
         return false;
 
     }
+
+    public void setValueCash(int valueCash) {
+        this.valueCash = valueCash;
+    }
 }
