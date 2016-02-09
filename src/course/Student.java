@@ -3,7 +3,7 @@ package course;
 
 public class Student extends Person {
     private int sessionSum;
-
+    private int valueCash;
 
 
     private Level level;
@@ -26,7 +26,13 @@ public class Student extends Person {
         return level;
     }
 
-    public void addSession() {
-        sessionSum = sessionSum++;
+    public boolean addSession() {
+        if (valueCash >= FirmAccount.getSessionCost()) {
+            sessionSum = sessionSum++;
+            valueCash = valueCash - FirmAccount.getSessionCost();
+            return true;
+        }
+        return false;
+
     }
 }
