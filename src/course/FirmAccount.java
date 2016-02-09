@@ -35,4 +35,7 @@ public class FirmAccount {
         return groupList;
     }
 
+    public static int getSessionCost() {
+        return sessionCost;
+    }
 }

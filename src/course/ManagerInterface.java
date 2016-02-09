@@ -5,5 +5,5 @@ package course;
  */
 public interface ManagerInterface {
     boolean addStudent(Student student, Level level);
-    boolean getPayment(Student student, long sum);
+    boolean getPayment(Student student, int sum);
 }
