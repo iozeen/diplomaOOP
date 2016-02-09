@@ -6,6 +6,7 @@ import java.util.List;
 
 public abstract class Employee extends Person{
     private Long hireDate;
+    private static int nextId;
     private int id;
 
     public Long getHireDate() {
@@ -36,5 +37,5 @@ public abstract class Employee extends Person{
         return sb.toString();
     }
 
-    abstract Long earnings();
+    abstract long earnings();
 }

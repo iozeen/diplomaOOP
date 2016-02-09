@@ -1,18 +1,32 @@
 package course;
 
-public class Director {
+import java.lang.reflect.GenericArrayType;
+import java.text.SimpleDateFormat;
 
-    public void addTeacher(){
-
+public class Director extends Employee implements DirectorInterface {
+    @Override
+    public Manager hireManager(String name, String surname) {
+        Manager manager = new Manager();
+//        manager.
+        return manager;
     }
-    public void addManager(){
 
+    @Override
+    public Instructor hireInstructor(String name, String surname) {
+        return null;
     }
-    public void acceptPayment(Student student, double summ){
 
+//    @Override
+//    long earnings() {
+//        long earnings = FirmAccount.getBalance()/2;
+//        return earnings;
+//    }
+
+    public static void main(String[] args) {
     }
 
-    public void printStudentByPay(){
-
+    @Override
+    long earnings() {
+        return 0;
     }
 }

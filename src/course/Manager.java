@@ -1,7 +1,7 @@
 package course;
 
 
-public class Manager implements ManagerInterface {
+public class Manager extends Employee implements ManagerInterface {
 
 
     @Override
@@ -22,5 +22,10 @@ public class Manager implements ManagerInterface {
             return true;
         }
         return false;
+    }
+
+    @Override
+    long earnings() {
+        return 0;
     }
 }

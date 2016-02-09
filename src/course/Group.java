@@ -8,12 +8,7 @@ public class Group {
     private List<Student> studentList = new ArrayList<>();
     private Instructor instructor;
     private Level levelGroup;
-
-
-
     public Group() {
-
-
     }
 
     public Instructor getInstructor() {
