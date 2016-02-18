@@ -9,5 +9,6 @@ public class Sample {
         System.out.println("New changes.");
 
         System.out.println("Izmineniya");
+        System.out.println("sample ilya");
     }
 }
