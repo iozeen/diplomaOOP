@@ -10,5 +10,6 @@ public class Sample {
 
         System.out.println("Izmineniya");
         System.out.println("sample ilya");
+        System.out.println("check if i can merge with master");
     }
 }
