@@ -11,5 +11,7 @@ public class Sample {
         System.out.println("New changes.");
         System.out.println("New changes.");
         System.out.println("New changes.");
+        System.out.println("New changes.");
+        System.out.println("New changes.");
     }
 }
