@@ -3,14 +3,20 @@ package course;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-Я тут удалил поле id и все с ним связанное,
-прикольная штука getClass().getSimpleName() - не знал
- */
-public class Person {
+
+public abstract class Person {
     private String name;
     private String surname;
-    private String phone;
+    private String id;
+
+    public Person() {
+    }
+
+    public Person(String name, String surname, String id) {
+        this.name = name;
+        this.surname = surname;
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -28,12 +34,12 @@ public class Person {
         this.surname = surname;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getId() {
+        return id;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
@@ -42,7 +48,7 @@ public class Person {
         sb.append(getClass().getSimpleName());
         sb.append("[name:").append(getName());
         sb.append(", last name: ").append(getSurname());
-        sb.append(", phone: ").append(getPhone());
+        sb.append(", id: ").append(getId());
         sb.append("]");
         return sb.toString();
     }

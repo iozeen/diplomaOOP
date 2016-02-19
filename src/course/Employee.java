@@ -4,27 +4,14 @@ package course;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Employee extends Person{
-    private Long hireDate;
-    private static int nextId;
-    private int id;
+public abstract class Employee extends Person {
 
-    public Long getHireDate() {
-        return hireDate;
+
+    public Employee() {
     }
 
-    public Employee setHireDate(Long hireDate) {
-        this.hireDate = hireDate;
-        return this;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public Employee setId(int id) {
-        this.id = id;
-        return this;
+    public Employee(String name, String surname, String id) {
+        super(name, surname, id);
     }
 
     @Override
@@ -32,10 +19,8 @@ public abstract class Employee extends Person{
         final StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         sb.delete(sb.length() - 1, sb.length());
-        sb.append(", hire date: ").append(getHireDate());
         sb.append(", id: ").append(getId()).append("]");
         return sb.toString();
     }
 
-    abstract long earnings();
 }

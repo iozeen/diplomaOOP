@@ -1,19 +1,55 @@
 package course;
 
-import java.lang.reflect.GenericArrayType;
-import java.text.SimpleDateFormat;
+public class Director extends Employee implements InterfaceDirector {
+    private static Director director = new Director();
 
-public class Director extends Employee implements DirectorInterface {
-    @Override
-    public Manager hireManager(String name, String surname) {
-        Manager manager = new Manager();
-//        manager.
-        return manager;
+    private Director() {
+        super();
+
     }
 
-    @Override
-    public Instructor hireInstructor(String name, String surname) {
-        return null;
+    public static Director getDirector() {
+
+        return director;
+
+    }
+
+
+//    private Director(String name, String surname, String id) {
+//        super(name, surname, id);
+//    }
+
+//    public Director getDirector(){
+//        if director
+//    }
+
+
+//    public Manager hireManager(String name, String surname, String id) {
+//        Manager manager = new Manager();
+////        manager.
+//        return manager;
+//    }
+//
+//
+//    public Instructor hireInstructor(String name, String surname) {
+//        return null;
+//    }
+    /**
+
+     *
+     * @param   idInstructor   a value.
+     * @param   levelGroup   a value.
+     * @return  TEST
+     *
+     */
+    public void createGroup(String idInstructor, String levelGroup) {
+        Group groupForAdd = new Group();
+        Instructor instructor = Utils.instructortById(idInstructor);
+        FirmAccount.getGroupList().add(groupForAdd);
+        instructor.getGroupList().add(groupForAdd);
+        groupForAdd.setInstructor(instructor);
+        groupForAdd.setLevelGroup(levelGroup);
+        groupForAdd.setBalanceLessons(Level.getNumberOfLessons());
     }
 
 //    @Override
@@ -22,11 +58,9 @@ public class Director extends Employee implements DirectorInterface {
 //        return earnings;
 //    }
 
-    public static void main(String[] args) {
-    }
 
-    @Override
-    long earnings() {
-        return 0;
-    }
+//    @Override
+//    long earnings() {
+//        return 0;
+//    }
 }

@@ -2,41 +2,40 @@ package course;
 
 
 public class Student extends Person {
-    private int sessionSum;
-    private int valueCash;
-
-
+    private int balance;
     private Level level;
-//    private int idStudent;
-//    private static int idNext = 1;
 
-    //    public Student(){
-//        idStudent = idNext++;
-//    }
-    public Student(String name, String surname) {
-        setName(name);
-        setSurname(surname);
+    public Student(String name, String surname, String phone) {
+        super(name, surname, phone);
     }
 
-    public void setLevel(Level level) {
-        this.level = level;
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int addBalance) {
+        this.balance = this.balance + addBalance;
     }
 
     public Level getLevel() {
         return level;
     }
 
-    public boolean addSession() {
-        if (valueCash >= FirmAccount.getSessionCost()) {
-            sessionSum = sessionSum++;
-            valueCash = valueCash - FirmAccount.getSessionCost();
-            return true;
-        }
-        return false;
-
+    public Student setLevel(Level level) {
+        this.level = level;
+        return this;
     }
 
-    public void setValueCash(int valueCash) {
-        this.valueCash = valueCash;
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Student{");
+        sb.append("name:").append(getName());
+        sb.append(", last name: ").append(getSurname());
+        sb.append(", id: ").append(getId());
+        sb.append(", balance=").append(balance);
+        sb.append(", level=").append(level);
+        sb.append('}');
+        return sb.toString();
     }
+
 }

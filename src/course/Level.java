@@ -3,18 +3,24 @@ package course;
 
 public enum Level {
     Elementary(60), PreIntermediate(65), Intermediate(65), UpperIntermediate(65), Advanced(65);
+    private static final int NumberOfLessons = 12;
+    private int costOneLesson;
 
-    private int numberLessons;
-
-    Level(int numberLessons) {
-        this.numberLessons = numberLessons;
+    Level(int costLevel) {
+        this.costOneLesson = costLevel;
     }
 
-    public int getNumberLessons() {
-        return numberLessons;
+    public int getCostOneLesson() {
+        return costOneLesson;
     }
 
-    public void setNumberLessons(int numberLessons) {
-        this.numberLessons = numberLessons;
+    public static int getNumberOfLessons() {
+        return NumberOfLessons;
+    }
+
+
+    public void setCostOneLesson(int costLevel) {
+        this.costOneLesson = costLevel;
     }
 }
+//
